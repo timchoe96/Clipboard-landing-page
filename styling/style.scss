@@ -1,0 +1,109 @@
+// ## Colors
+// ### Primary
+$strongCyan: hsl(171, 66%, 44%);
+$lightBlue: hsl(233, 100%, 69%);
+// ### Neutral
+$DarkGrayishBlue: hsl(210, 10%, 33%);
+$GrayishBlue: hsl(201, 11%, 66%);
+
+$fontFamily:'Bai Jamjuree';
+@mixin colorButton(){
+    width:180px;
+    height:40px;
+    border-radius: 30px;
+    border:none;
+    font-family:$fontFamily;
+    font-weight:600;
+    color:white;
+    margin-top:40px;
+    &:focus{
+        outline:0;
+    }
+}
+
+
+// start of styling
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:url('../images/bg-header-desktop.png') no-repeat center top;
+}
+
+.topLogo{
+    margin-top:100px;
+    text-align: center;
+    font-family:$fontFamily;
+    // border:1px solid black;
+        h1{
+            margin-top: 30px;
+            color:$DarkGrayishBlue;
+            font-size:38px;
+        }
+        .paragraph1{
+            color:$GrayishBlue;
+            width:600px;
+            margin:20px auto 0;
+            line-height:1.8;
+        }
+        .greenButton{
+            background-color:$strongCyan;
+            @include colorButton();
+            &:hover{
+                box-shadow:0px 0px 10px $strongCyan;
+                background-color:hsl(171, 47%, 60%);
+            }
+            margin-right:5px;
+        }
+        .blueButton{
+            background-color:$lightBlue;
+            @include colorButton();
+            &:hover{
+                box-shadow:0px 0px 10px $lightBlue;
+                background-color:hsl(233, 70%, 75%);
+            }
+            margin-left:5px;
+        }
+    }
+
+    @media only screen and (max-width:375px){
+        body{
+            background:url('../images/bg-header-mobile.png') no-repeat center top;
+        }
+        .topLogo{
+            margin-top:120px;
+            h1{
+                font-size:30px;
+                margin-top:50px ;
+            }
+            .paragraph1{
+                width:90vw;
+                font-size:14px;
+                line-height: 1.8;
+            }
+            .greenButton{
+                margin-right:0;
+                width:85vw;
+                height:50px;
+                font-size: 16px;
+            }
+            .blueButton{
+                margin-left:0;
+                height:50px;
+                width:85vw;
+                margin-top:20px;
+                font-size: 16px;
+            }
+        }
+    }
+
+    @import './topMid';
+    @import './topMid2';
+    @import './topMid3';
+    @import './topMid4';
+    @import './logo';
+    @import './topBottom';
+    @import './bottom';

@@ -1,0 +1,42 @@
+// ## Colors
+// ### Primary
+$strongCyan: hsl(171, 66%, 44%);
+$lightBlue: hsl(233, 100%, 69%);
+// ### Neutral
+$DarkGrayishBlue: hsl(210, 10%, 33%);
+$GrayishBlue: hsl(201, 11%, 66%);
+
+$fontFamily:'Bai Jamjuree';
+
+.topMid3{
+    text-align: center;
+    font-family:$fontFamily;
+    // border:1px solid black;
+    margin-top: 150px;
+    img{
+        margin-top:100px;
+    }
+   h1{
+       color:$DarkGrayishBlue;
+   }
+   div{
+       color:$GrayishBlue;
+       width:600px;
+       margin: 20px auto 0;
+       line-height: 1.8;
+   }
+}
+
+@media only screen and (max-width:375px){
+    .topMid3{
+        img{
+            width:85vw;
+            height:auto;
+            margin-top:80px;
+            font-size:30px;
+        }
+        div{
+            width:85vw;
+        }
+    }
+}

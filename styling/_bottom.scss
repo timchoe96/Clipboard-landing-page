@@ -1,0 +1,67 @@
+// ## Colors
+// ### Primary
+$strongCyan: hsl(171, 66%, 44%);
+$lightBlue: hsl(233, 100%, 69%);
+// ### Neutral
+$DarkGrayishBlue: hsl(210, 10%, 33%);
+$GrayishBlue: hsl(201, 11%, 66%);
+
+$fontFamily:'Bai Jamjuree';
+
+.bottom{
+    padding:0 120px 0 30px;
+    font-family: $fontFamily;
+    color:$DarkGrayishBlue;
+    height:140px;
+    display:flex;
+    justify-content: space-between;
+    background:hsl(214, 19%, 93%);
+    align-items:center;
+    .bottomFirst{
+        p{
+            line-height: 1.8;
+            color:$DarkGrayishBlue;
+        }
+        display:flex;
+        justify-content:space-evenly;
+        width:70%;
+        align-items:flex-start;
+        img{
+            width:50px;
+            height: auto;
+            align-self: center;
+        }
+    }
+    .socials{
+        i{
+            width:35px;
+            font-size: 25px;
+        }
+    }
+}
+
+@media only screen and (max-width:375px){
+    .bottom{
+        flex-wrap:wrap;
+        height:500px;
+        justify-content: center;
+        padding:0;
+        .bottomFirst{
+            padding-top: 70px;
+            flex-direction: column;
+            align-items:center;
+            text-align: center;
+            height:200px;
+            p{
+                margin-top:25px;
+            }
+        }
+        .socials{
+            text-align: center;
+            i{
+                width:50px;
+                font-size:30px;
+            }
+        }
+    }
+}

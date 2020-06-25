@@ -1,0 +1,62 @@
+// ## Colors
+// ### Primary
+$strongCyan: hsl(171, 66%, 44%);
+$lightBlue: hsl(233, 100%, 69%);
+// ### Neutral
+$DarkGrayishBlue: hsl(210, 10%, 33%);
+$GrayishBlue: hsl(201, 11%, 66%);
+
+$fontFamily:'Bai Jamjuree';
+
+.topMid4{
+    margin-top:50px;
+    text-align: center;
+    font-family:$fontFamily;
+    .title{
+        margin:auto;
+        h1{
+            color:$DarkGrayishBlue;
+        }
+        p{
+            color:$GrayishBlue;
+            margin-top: 20px;  
+        }
+    }
+    .tools{
+        margin-top:80px;
+        display: flex;
+        justify-content: space-evenly;
+        div{
+            width:350px;
+            h3{
+                color:$DarkGrayishBlue;
+                margin-top:40px;
+            }
+            p{
+                color:$GrayishBlue;
+                margin-top: 10px;
+                line-height: 1.8;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:375px){
+    .topMid4{
+        .title{
+            width:85vw;
+        }
+        .tools{
+            margin-top: 20px;
+            flex-wrap:wrap;
+            div{
+                width:85vw;
+                margin-top:50px;
+                p{
+                    
+                    font-size:14px;
+                }
+            }
+        }
+    }
+}
